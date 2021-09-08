@@ -1,0 +1,211 @@
+
+html {
+	height: 100%;
+	/*Image only BG fallback*/
+	
+	/*background = gradient + image pattern combo//  linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));*/
+	 
+		
+}
+
+th{
+	color:navy;
+}
+h4{
+	
+	font-family:Bookman Old Style;
+}
+body {
+	/*background-size:100%;*/
+	background-height:100%;
+	background-image:none;
+		background:linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+/*	background-image:url('vjitlogo.png');
+	background-repeat:repeat;*/
+	
+	font-family: montserrt, arial, verdana;
+	
+}
+
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+ padding-left:30px;
+}
+
+
+
+
+#feedback_form {
+	width: 1500px;
+	
+	margin: 0px 10px;
+	text-align: center;
+	position: relative;
+	font-family:"Times New Roman", Times, serif;
+
+}
+#feedback_form div {
+	background:white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 30px 25px;
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0%;
+	
+	/*stacking fieldsets above each other*/
+	position: relative;
+}
+
+#feedback_form th{
+	padding:5px;
+	text-align:center;
+}
+/*inputs*/
+#feedback_form input, #feedback_form select {
+	padding: 10px;
+	
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	margin-right:30px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+#feedback_form textarea{
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	margin-right:30px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+	height:50px;
+}
+
+/*buttons*/
+#feedback_form .action-button {
+	width: 100px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#feedback_form .logout-button {
+	width: 100px;
+	background: #9e1616;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#feedback_form .action-button:hover, #feedback_form .logout-button:hover {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+.fs-title{
+	color:RED;
+	
+	
+}
+.fs-title a{
+	color:blue;
+	
+	
+	
+}
+.form_select{
+	padding-left:5px;
+	
+	
+	
+}
+
+td{
+	padding:5px;
+	text-align:center;
+}
+
+
+@media only screen and (max-width: 900px) {
+	body{
+		
+		background-image:none;
+		background:linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+	}
+	#feedback_form {
+	width: 100%;
+	
+	margin: 20px 1px;
+	text-align: center;
+	position: relative	;
+
+}
+
+
+
+#feedback_form div {
+	background: gray;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 20px;
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0 1%;
+	
+	/*stacking fieldsets above each other*/
+	position: relative;
+}
+
+#feedback_form {
+	width: 300px;
+	
+	margin: 0px 5px;
+	text-align: center;
+	position: relative;
+	font-family:"Times New Roman", Times, serif;
+
+}
+.footer{
+position:fixed;
+bottom:0;
+color:white;	
+	
+}	
+#feedback_form input, #feedback_form textarea, #feedback_form select {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	margin-right:5px;
+	width: 250px;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+
+#feedback_form th{
+	padding:5px;
+	text-align:center;
+}
+
+}
