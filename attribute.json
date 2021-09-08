@@ -1,0 +1,410 @@
+{
+	"admin": {
+		"id1": [
+			"feedback@vjit.ac.in"
+		],
+		"id2": [
+			"feedback.subadmin@vjit.ac.in"
+		],
+		"pass1": [
+			"3886708b64a014b51584a2910a335fcd"
+		],
+		"pass2": [
+			"a1649ff7b0fdf698f58581d33201ddce"
+		]
+	},
+	"attribute": {
+		"attribute": [
+			"Communication",
+			"teaching",
+			"explaining",
+			"doubt clearing",
+			"interactive",
+			"Subject Known"
+		]
+	},
+	"c24": {
+		"1": "created",
+		"2": "approved",
+		"3": "updated",
+		"4": "deleted"
+	},
+	"c40": {
+		"1": "student",
+		"2": "",
+		"3": "",
+		"4": "",
+		"5": "HOD"
+	},
+	"checked": {
+		"value": "false"
+	},
+	"checknow": "Developed by Feedback Team",
+	"main":"Developed by Munazzar CSE 2019",
+	"cluster": [
+		"t103",
+		"t104",
+		"t106",
+		"t107",
+		"t108",
+		"t109",
+		"t110",
+		"t111",
+		"t112",
+		"t114"
+	],
+	"current_database": {
+		"value": "20_21_semI"
+	},
+	"database": {
+		"1": [
+			"19_20_semI",
+			"2019-2020,SemI"
+		],
+		"2": [
+			"19_20_semII",
+			"2019-2020,SemII"
+		],
+		"3": [
+			"20_21_semI",
+			"2020-2021,SemI"
+		]
+	},
+	"insert_into_database": [],
+	"pass1": "202cb962ac59075b964b07152d234b70",
+	"t101": {
+		"10": [
+			"c1",
+			"c5",
+			"c25",
+			"c15"
+		],
+		"20": [
+			"c1",
+			"c2",
+			"c5",
+			"c15",
+			"c25",
+			"c4"
+		],
+		"60": "c29,c1,c2,c4,c5,c23,c24,c25,c15",
+		"name": "Student Data"
+	},
+	"t102": {
+		"10": [
+			"c7",
+			"c6",
+			"c13",
+			"c40",
+			"c41",
+			"c42",
+			"c4"
+		],
+		"20": [
+			"c13",
+			"c40",
+			"c41",
+			"c42",
+			"c4",
+			"c6"
+		],
+		"60": "c7,c6,c13,c24,c40,c41,c42,c4",
+		"name": "Faculty Data"
+	},
+	"t103": {
+		"10": [
+			"c39",
+			"c7",
+			"c15",
+			"c25"
+		],
+		"20": [
+			"c7",
+			"c15",
+			"c25",
+			"c24"
+		],
+		"60": "c39,c7,c15,c25",
+		"name": "Classes Assigned"
+	},
+	"t104": {
+		"10": [
+			"c11",
+			"c12",
+			"c13"
+		],
+		"20": [
+			"c12",
+			"c13"
+		],
+		"50": [
+			"c17",
+			"c18",
+			"c19",
+			"c20",
+			"c21",
+			"c22",
+			"c30",
+			"c31",
+			"c32",
+			"c33"
+		],
+		"60": "c29,c27,c7,c17,c18,c19,c20,c21,c22,c30,c31,c32,c33,c34,c24",
+		"70": "c29,c17,c18,c19,c20,c21,c22,c30,c31,c32,c33,c34,c15,c7",
+		"admin-detail-array": [
+			"c17",
+			"c18",
+			"c19",
+			"c20",
+			"c21",
+			"c22",
+			"c30",
+			"c31",
+			"c32",
+			"c33"
+		],
+		"admin-faculty-detail": "c17,c18,c19,c20,c21,c22,c30,c31,c32,c33",
+		"admin-main": [
+			"c15",
+			"c17",
+			"c18",
+			"c19",
+			"c20",
+			"c21",
+			"c22",
+			"c30",
+			"c31",
+			"c32",
+			"c33",
+			"c34"
+		],
+		"admin-main-final": [
+			"c17",
+			"c18",
+			"c19",
+			"c20",
+			"c21",
+			"c22",
+			"c30",
+			"c31",
+			"c32",
+			"c33"
+		],
+		"c17": {
+			"title": "Theoretical and application oriented knowledge"
+		},
+		"c18": {
+			"title": "Ability to explain in simple terms"
+		},
+		"c19": {
+			"title": "Usage of experiments or classroom activities"
+		},
+		"c20": {
+			"title": "Comes regular and on time"
+		},
+		"c21": {
+			"title": "Control over the class"
+		},
+		"c22": {
+			"title": "Loud enough"
+		},
+		"c30": {
+			"title": "combination of all the other qualities"
+		},
+		"c31": {
+			"title": "Explanation related to subject"
+		},
+		"c32": {
+			"title": "Clarification of doubts"
+		},
+		"c33": {
+			"title": "Explanation with real time examples"
+		},
+		"final-admin": "c7,c15,c17,c18,c19,c20,c21,c22,c30,c31,c32,c33,c57",
+		"final-sum": "c17,c18,c19,c20,c21,c22,c30,c31,c32,c33,c34",
+		"graph-labels": [
+			"c17",
+			"c18",
+			"c19",
+			"c20",
+			"c21",
+			"c22",
+			"c30",
+			"c31",
+			"c32",
+			"c33"
+		],
+		"insert_feedback": "c29,c17,c18,c19,c20,c21,c22,c30,c31,c32,c33,c34,c15,c7,c23,c25",
+		"name": "Faculty Feedback Data",
+		"student-faculty-data": "c29,c15,c7,c17,c18,c19,c20,c21,c22,c30,c31,c32,c33,c34",
+		"student-faculty-data-array": [
+			"c29",
+			"c15",
+			"c7",
+			"c17",
+			"c18",
+			"c19",
+			"c20",
+			"c21",
+			"c22",
+			"c30",
+			"c31",
+			"c32",
+			"c33",
+			"c34"
+		],
+		"subject-faculty-detail": "c7,c17,c18,c19,c20,c21,c22,c30,c31,c32,c33",
+		"subject-faculty-detail-array": [
+			"c15",
+			"c7",
+			"c17",
+			"c18",
+			"c19",
+			"c20",
+			"c21",
+			"c22",
+			"c30",
+			"c31",
+			"c32",
+			"c33"
+		],
+		"year-faculty-detail": "c29,c7,c15,c17,c18,c19,c20,c21,c22,c30,c31,c32,c33,c34",
+		"year-faculty-detail-array": [
+			"c7",
+			"c15",
+			"c17",
+			"c18",
+			"c19",
+			"c20",
+			"c21",
+			"c22",
+			"c30",
+			"c31",
+			"c32",
+			"c33"
+		],
+		"year-student-faculty": "c29,c7,c15,c17,c18,c19,c20,c21,c22,c30,c31,c32,c33,c34",
+		"year-student-faculty-array": [
+			"c29",
+			"c7",
+			"c15",
+			"c17",
+			"c18",
+			"c19",
+			"c20",
+			"c21",
+			"c22",
+			"c30",
+			"c31",
+			"c32",
+			"c33",
+			"c34"
+		]
+	},
+	"t105": {
+		"10": [
+			"c25",
+			"c13",
+			"c12",
+			"c14"
+		],
+		"20": [
+			"c25",
+			"c13",
+			"c12",
+			"c14"
+		],
+		"60": "c25,c13,c12,c14",
+		"name": "Year Table"
+	},
+	"t106": {
+		"10": [
+			"c16",
+			"c26"
+		],
+		"20": [
+			"c16",
+			"c26"
+		],
+		"60": "c16,c26",
+		"name": "Regular Subject Data"
+	},
+	"t107": {
+		"10": [
+			"c37",
+			"c35"
+		],
+		"20": [
+			"c37",
+			"c35"
+		],
+		"60": "c37,c35",
+		"name": "OE Subject Data"
+	},
+	"t108": {
+		"10": [
+			"c38",
+			"c36"
+		],
+		"20": [
+			"c38",
+			"c36"
+		],
+		"60": "c38,c36",
+		"name": "PE Subject Data"
+	},
+	"t109": {
+		"10": [
+			"c1",
+			"c35"
+		],
+		"20": [
+			"c1",
+			"c35"
+		],
+		"60": "c1,c35",
+		"name": "OE Student List"
+	},
+	"t110": {
+		"10": [
+			"c1",
+			"c36"
+		],
+		"20": [
+			"c1",
+			"c36"
+		],
+		"60": "c1,c36",
+		"name": "PE Student List"
+	},
+	"t111": {
+		"10": [
+			"c43",
+			"c44"
+		],
+		"20": [
+			"c43",
+			"c44"
+		],
+		"60": "c43,c44",
+		"name": "BATCH-LAB Subject List"
+	},
+	"t112": {
+		"10": [
+			"c1",
+			"c44"
+		],
+		"20": [
+			"c1",
+			"c44"
+		],
+		"60": "c1,c44",
+		"name": "BATCH-LAB Student List"
+	},
+	"t113": {
+		"name": "Log Table"
+	},
+	"view_from_database": {
+		"value": "19_20_semII"
+	}
+}
