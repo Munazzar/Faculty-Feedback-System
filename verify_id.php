@@ -1,0 +1,60 @@
+<?php
+error_reporting(0);
+//echo "ur in search_fields";
+ $text=$_REQUEST['text'];
+ $table=$_REQUEST['table'];
+ 
+ $sql_array=['select','drop','*','alter','truncate','1=1','insert','values','create','show',';','update','desc'];
+$check=0;
+foreach($sql_array as $value)
+{
+if(strpos($text, $value) !== false)	
+	$check=1;
+}
+echo $check;
+if($check==0){
+
+include_once("database_connect.php");//data bse connectivity
+$link="";
+//reading property file
+include_once("property_read.php");
+
+$query="select * from $table where 1=1".$text;
+
+if($result=mysqli_query($con,$query))
+	{
+		if(($rows=mysqli_num_rows($result))>0)
+		{
+			while ($row = mysqli_fetch_assoc($result)) 
+			{
+  
+				foreach($row as $key=>$field)
+				{
+				if(in_array($key,array("c4")))
+					{
+						if($field==1)
+						{
+							echo "3";
+							exit;
+						}
+					}
+					if(in_array($key,array("c3")))
+					{
+						if($field==null)
+							echo "1";
+						else
+							echo "2";
+					}
+					
+				}	
+					
+			}
+			
+		}
+		else 
+			echo "Match Not Found";
+	}
+}
+else
+	echo "5";
+?>

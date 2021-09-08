@@ -1,0 +1,253 @@
+<?php
+
+ini_set('max_execution_time', 300);
+require_once "docs/Classes/PHPExcel.php";
+require_once("property_read.php");
+
+require_once("database_connect.php");
+$sheet=0;
+$dir='./docs/faculty_assigned/faculty_assignment/';
+$files_in_dir=scandir($dir);
+$file_name="";
+$year="";
+$count=1;
+$id=Array();
+$sub=Array();
+foreach($files_in_dir as $file)
+{
+	$file_details=pathinfo($file);
+	//print_r($file_details);
+	if($file_details["extension"]=='xlsx')
+	{
+		 $file_name=$file_details['basename'];
+		$year=$file_details['filename'];
+	}
+	else
+		continue;
+		$tmpfname = "docs/faculty_assigned/faculty_assignment/$file_name";
+		$excelReader = PHPExcel_IOFactory::createReaderForFile($tmpfname);
+		$excelObj = $excelReader->load($tmpfname);
+		$worksheet = $excelObj->getSheet(0);
+		$lastRow = $worksheet->getHighestRow();
+			
+			$now = DateTime::createFromFormat('U.u',microtime(true));
+	  $time=(string)$now->format("Y-m-d/H:i:s");
+
+			  
+			  $objPHPExcel = new PHPExcel();
+
+		 // Set the active Excel worksheet to sheet 0 
+echo "$file_name<br>";
+		$objPHPExcel->setActiveSheetIndex(0); 
+		//print_r($pe_subject_code);
+		for ($excel_row = 1; $row <= $lastRow; $excel_row++) {
+			
+			 $subject_id='';
+			  require("code_insert.php");
+			$faculty_name=$worksheet->getCell('A'.$excel_row)->getValue();
+			$faculty_id=$faculty_code[trim($faculty_name)];
+			
+			$subject_name=$worksheet->getCell('B'.$excel_row)->getValue();
+			$subject_id='';
+			$branch_name=$worksheet->getCell('C'.$excel_row)->getValue();
+			$branch_id='';
+			$subject_type=$worksheet->getCell('D'.$excel_row)->getValue();
+			
+			echo "$faculty_name - $subject_name - $branch_name - $subject_type<br>";
+			
+			if($subject_name==$branch_name)
+			{
+				if(strcasecmp($subject_type,'OE')==0)
+				{
+					
+					//echo "hello";
+					$subject_id=$oe_subject_code[trim($subject_name)];
+					$branch_id=$oe_subject_code[trim($subject_name)];
+					if($subejct_id=='')
+					{
+						//counting number of rows/records
+						$query="select count(*) from t107_".$property_decode['current_database']['value'];
+						$count=0;
+						if($result=mysqli_query($con,$query))
+						{	
+								$row = mysqli_fetch_row($result);
+								$count=$row[0];
+						}
+						
+						
+						$count++;
+						$oe_sub='oe'.$count;
+							$sub_id=$subject_id;
+						$query="insert into t107_".$property_decode['current_database']['value']."(c37,c35)values('$sub_id','$oe_sub')";	
+					//echo "<br>";
+						if(mysqli_query($con,$query))
+						{
+						echo  $query."<br>";
+						}
+						else
+							echo("Error description: " . mysqli_error($con));
+						
+						require('code_insert.php');
+						$subject_id=$oe_subject_code[trim($subject_name)];
+						$branch_id=$oe_subject_code[trim($subject_name)];
+						
+					}
+					
+				}
+				else if(strcasecmp($subject_type,'PE')==0)
+				{
+					
+					 $subject_id=$pe_subject_code[trim($subject_name)];
+					$branch_id=$pe_subject_code[trim($subject_name)];
+					
+					
+					if($subejct_id=='')
+					{
+						//counting number of rows/records
+						$query="select count(*) from t108_".$property_decode['current_database']['value'];
+						$count=0;
+						if($result=mysqli_query($con,$query))
+						{	
+								$row = mysqli_fetch_row($result);
+								$count=$row[0];
+						}
+						
+						
+						$count++;
+						$oe_sub='pe'.$count;
+							$sub_id=$subject_id;
+						$query="insert into t108_".$property_decode['current_database']['value']."(c38,c36)values('$sub_id','$oe_sub')";	
+					//echo "<br>";
+						if(mysqli_query($con,$query))
+						{
+						echo  $query."<br>";
+						}
+						else
+							echo("Error description: " . mysqli_error($con));
+						
+						require('code_insert.php');
+							 $subject_id=$pe_subject_code[trim($subject_name)];
+					$branch_id=$pe_subject_code[trim($subject_name)];
+					
+					}
+					
+					
+					
+				}
+				else if(strcasecmp($subject_type,'BATCH-LAB')==0)
+				{
+					
+				 $subject_id=$batch_lab_subject_code[trim($subject_name)];
+					$branch_id=$batch_lab_subject_code[trim($subject_name)];
+					
+					
+					
+					
+					if($subejct_id=='')
+					{
+						//counting number of rows/records
+						$query="select count(*) from t111_".$property_decode['current_database']['value'];
+						$count=0;
+						if($result=mysqli_query($con,$query))
+						{	
+								$row = mysqli_fetch_row($result);
+								$count=$row[0];
+						}
+						
+						
+						$count++;
+						$oe_sub='bl'.$count;
+							$sub_id=$subject_id;
+						$query="insert into t111_".$property_decode['current_database']['value']."(c43,c44)values('$sub_id','$oe_sub')";	
+					//echo "<br>";
+						if(mysqli_query($con,$query))
+						{
+						echo  $query."<br>";
+						}
+						else
+							echo("Error description: " . mysqli_error($con));
+						
+						require('code_insert.php');
+						$subject_id=$batch_lab_subject_code[trim($subject_name)];
+					$branch_id=$batch_lab_subject_code[trim($subject_name)];
+					
+					}
+					
+					
+				}
+			
+			}
+			else
+			{
+				
+				$subject_id=$regular_subject_code[trim($subject_name)];
+				$branch_id=$year_code[trim($branch_name)];
+				
+				
+				if($subejct_id=='')
+					{
+						//counting number of rows/records
+						$query="select count(*) from t106_".$property_decode['current_database']['value'];
+						$count=0;
+						if($result=mysqli_query($con,$query))
+						{	
+								$row = mysqli_fetch_row($result);
+								$count=$row[0];
+						}
+						
+						
+						$count++;
+						$oe_sub='s'.$count;
+							$sub_id=$subject_id;
+						$query="insert into t106_".$property_decode['current_database']['value']."(c16,c23)values('$sub_id','$oe_sub')";	
+					//echo "<br>";
+						if(mysqli_query($con,$query))
+						{
+						echo  $query."<br>";
+						}
+						else
+							echo("Error description: " . mysqli_error($con));
+						
+						require('code_insert.php');
+						$subject_id=$regular_subject_code[trim($subject_name)];
+						$branch_id=$year_code[trim($branch_name)];
+						
+					}
+				
+				
+			}
+			
+			
+		
+			
+			
+			
+			$now = DateTime::createFromFormat('U.u',microtime(true));
+			$time=(string)$now->format("Y-m-d/H:i:s");
+		
+	 $date_time=(string)$now->format("YmdHisu");
+	 if($faculty_id==null&&$subject_id==null)break;
+			   $query="insert into t103_".$property_decode['current_database']['value']."(c39,c7,c15,c25) values('$date_time','$faculty_id','$subject_id','$branch_id')";
+			
+			echo "<br><br>";
+			if(mysqli_query($con,$query))
+			{
+				echo  $query."<br>";
+			}
+			else
+				echo "error".mysqli_error();
+			
+		}
+		
+		
+
+	
+
+	//unlink($tmpfname);
+	}
+		
+		
+		
+  
+
+?>
